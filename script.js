@@ -1,88 +1,88 @@
-// Product Data
+// Product Data with Real Images
 const products = [
     {
         id: 1,
         name: "Laptop Pro 15",
         category: "electronica",
         price: 999.99,
-        icon: "💻"
+        image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop"
     },
     {
         id: 2,
         name: "Smartphone X",
         category: "electronica",
         price: 699.99,
-        icon: "📱"
+        image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop"
     },
     {
         id: 3,
         name: "Auriculares Wireless",
         category: "electronica",
         price: 149.99,
-        icon: "🎧"
+        image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop"
     },
     {
         id: 4,
         name: "Camiseta Casual",
         category: "ropa",
         price: 29.99,
-        icon: "👕"
+        image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=300&fit=crop"
     },
     {
         id: 5,
         name: "Jeans Clásicos",
         category: "ropa",
         price: 59.99,
-        icon: "👖"
+        image: "https://images.unsplash.com/photo-1542272454315-4c01d7abdf4a?w=400&h=300&fit=crop"
     },
     {
         id: 6,
         name: "Zapatillas Deportivas",
         category: "ropa",
         price: 89.99,
-        icon: "👟"
+        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop"
     },
     {
         id: 7,
         name: "Lámpara de Mesa",
         category: "hogar",
         price: 45.99,
-        icon: "💡"
+        image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400&h=300&fit=crop"
     },
     {
         id: 8,
         name: "Cojín Decorativo",
         category: "hogar",
         price: 24.99,
-        icon: "🛋️"
+        image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e6?w=400&h=300&fit=crop"
     },
     {
         id: 9,
         name: "Reloj Inteligente",
         category: "electronica",
         price: 249.99,
-        icon: "⌚"
+        image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop"
     },
     {
         id: 10,
         name: "Chaqueta de Cuero",
         category: "ropa",
         price: 129.99,
-        icon: "🧥"
+        image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=300&fit=crop"
     },
     {
         id: 11,
         name: "Planta Decorativa",
         category: "hogar",
         price: 34.99,
-        icon: "🪴"
+        image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=400&h=300&fit=crop"
     },
     {
         id: 12,
         name: "Tablet Ultra",
         category: "electronica",
         price: 449.99,
-        icon: "📱"
+        image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=300&fit=crop"
     }
 ];
 
@@ -171,7 +171,9 @@ function prevSlide() {
 function renderProducts(productsToRender) {
     productsGrid.innerHTML = productsToRender.map(product => `
         <div class="product-card" data-category="${product.category}">
-            <div class="product-image">${product.icon}</div>
+            <div class="product-image">
+                <img src="${product.image}" alt="${product.name}" loading="lazy">
+            </div>
             <div class="product-info">
                 <span class="product-category">${product.category}</span>
                 <h3 class="product-title">${product.name}</h3>
@@ -240,7 +242,9 @@ function updateCart() {
     } else {
         cartItems.innerHTML = cart.map(item => `
             <div class="cart-item">
-                <div class="cart-item-image">${item.icon}</div>
+                <div class="cart-item-image">
+                    <img src="${item.image}" alt="${item.name}">
+                </div>
                 <div class="cart-item-info">
                     <div class="cart-item-title">${item.name}</div>
                     <div class="cart-item-price">$${item.price.toFixed(2)} x ${item.quantity}</div>
