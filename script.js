@@ -89,6 +89,11 @@ const products = [
 // Cart State
 let cart = [];
 
+// Carousel State
+let currentSlide = 0;
+let slideInterval;
+const SLIDE_DURATION = 5000; // 5 seconds
+
 // DOM Elements
 const productsGrid = document.getElementById('productsGrid');
 const cartBtn = document.getElementById('cartBtn');
@@ -99,12 +104,68 @@ const cartCount = document.getElementById('cartCount');
 const cartTotal = document.getElementById('cartTotal');
 const filterBtns = document.querySelectorAll('.filter-btn');
 
+// Carousel Elements
+const carouselTrack = document.getElementById('carouselTrack');
+const slides = document.querySelectorAll('.carousel-slide');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const indicators = document.querySelectorAll('.indicator');
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     renderProducts(products);
     loadCart();
     setupEventListeners();
+    initCarousel();
 });
+
+// Initialize Carousel
+function initCarousel() {
+    if (slides.length === 0) return;
+    
+    startAutoSlide();
+}
+
+// Start Auto Slide
+function startAutoSlide() {
+    slideInterval = setInterval(() => {
+        goToSlide(currentSlide + 1);
+    }, SLIDE_DURATION);
+}
+
+// Stop Auto Slide
+function stopAutoSlide() {
+    clearInterval(slideInterval);
+}
+
+// Go to Specific Slide
+function goToSlide(index) {
+    if (index < 0) {
+        index = slides.length - 1;
+    } else if (index >= slides.length) {
+        index = 0;
+    }
+    
+    slides[currentSlide].classList.remove('active');
+    indicators[currentSlide].classList.remove('active');
+    
+    currentSlide = index;
+    
+    slides[currentSlide].classList.add('active');
+    indicators[currentSlide].classList.add('active');
+    
+    carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+// Next Slide
+function nextSlide() {
+    goToSlide(currentSlide + 1);
+}
+
+// Previous Slide
+function prevSlide() {
+    goToSlide(currentSlide - 1);
+}
 
 // Render Products
 function renderProducts(productsToRender) {
@@ -208,6 +269,32 @@ function loadCart() {
 
 // Setup Event Listeners
 function setupEventListeners() {
+    // Carousel Controls
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+    }
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+    }
+    
+    // Carousel Indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            goToSlide(index);
+            stopAutoSlide();
+            startAutoSlide();
+        });
+    });
+    
     cartBtn.addEventListener('click', () => {
         cartModal.classList.add('active');
     });
