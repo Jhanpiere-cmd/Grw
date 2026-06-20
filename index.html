@@ -39,13 +39,49 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="container">
-            <div class="hero-content">
-                <h2 class="hero-title">Bienvenido a GrwStore</h2>
-                <p class="hero-subtitle">Descubre los mejores productos al mejor precio</p>
-                <button class="btn-primary">Ver Catálogo</button>
+    <!-- Hero Carousel -->
+    <section class="hero-carousel" id="inicio">
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide active">
+                    <div class="slide-content">
+                        <h2 class="hero-title">Bienvenido a GrwStore</h2>
+                        <p class="hero-subtitle">Descubre los mejores productos al mejor precio</p>
+                        <button class="btn-primary">Ver Catálogo</button>
+                    </div>
+                    <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"></div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <h2 class="hero-title">Ofertas Especiales</h2>
+                        <p class="hero-subtitle">Hasta 50% de descuento en productos seleccionados</p>
+                        <button class="btn-primary">Ver Ofertas</button>
+                    </div>
+                    <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1472851294608-4155f2118c03?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"></div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <h2 class="hero-title">Envío Gratis</h2>
+                        <p class="hero-subtitle">En pedidos superiores a $50 a todo el país</p>
+                        <button class="btn-primary">Comprar Ahora</button>
+                    </div>
+                    <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"></div>
+                </div>
+            </div>
+            
+            <!-- Carousel Controls -->
+            <button class="carousel-btn prev-btn" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next-btn" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators" id="carouselIndicators">
+                <div class="indicator active" data-index="0"></div>
+                <div class="indicator" data-index="1"></div>
+                <div class="indicator" data-index="2"></div>
             </div>
         </div>
     </section>
