@@ -1,54 +1,100 @@
-# GrwStore - Tienda Online E-commerce
+# GrwStore - Tienda Online Mejorada
 
-## Descripción
-GrwStore es una página web e-commerce moderna y responsiva creada con HTML, CSS y JavaScript puro. Ofrece una experiencia de compra completa con carrito de compras funcional.
+## 🎉 Mejoras Implementadas
 
-## Características
+### 1. **Menú Móvil con Hamburguesa** ✅
+- Botón de menú hamburguesa responsive
+- Animación suave al abrir/cerrar
+- Se cierra automáticamente al seleccionar una opción
+- Accesible con teclado y screen readers
 
-- 🛍️ **Catálogo de Productos**: Muestra productos organizados por categorías (Electrónica, Ropa, Hogar)
-- 🔍 **Búsqueda en Tiempo Real**: Filtra productos mientras escribes
-- 🛒 **Carrito de Compras**: 
-  - Agregar y eliminar productos
-  - Persistencia con LocalStorage
-  - Cálculo automático del total
-- 📱 **Diseño Responsivo**: Se adapta a móviles, tablets y escritorio
-- ✨ **Animaciones Suaves**: Transiciones y efectos visuales atractivos
-- 📧 **Formularios**: Contacto y newsletter funcionales
-- 🎨 **UI Moderna**: Diseño limpio y profesional
+### 2. **Accesibilidad (A11y)** ✅
+- ARIA labels en todos los botones interactivos
+- Roles semánticos (navigation, dialog, list, listitem)
+- Soporte para navegación por teclado
+- Focus visible mejorado
+- Textos alternativos para elementos visuales
+- Skip link para saltar al contenido principal
+- Notificaciones toast accesibles con `aria-live`
 
-## Estructura del Proyecto
+### 3. **Refactorización del Código JavaScript** ✅
+- **ES6 Modules**: Separación de datos y lógica
+- **Clase GrwStore**: Encapsulamiento completo
+- **Eliminación de inline onclick**: Eventos binded correctamente
+- **Debounce en el buscador**: Mejora de rendimiento (300ms)
+- **Caché de elementos DOM**: Mejor performance
+- **Código más mantenible y escalable**
+
+### 4. **Datos Externalizados** ✅
+- Productos en módulo separado (`products-data.js`)
+- Fácil de actualizar sin tocar la lógica
+- Exportación de categorías para reutilización
+
+### 5. **Sistema de Notificaciones Toast Mejorado** ✅
+- Contenedor dedicado en HTML
+- Tipos: success, error, info
+- Accesible con `role="alert"`
+- Auto-eliminación después de 3 segundos
+
+### 6. **Validación de Formularios** ✅
+- Validación visual con bordes rojos
+- Mensajes de error claros
+- Prevención de envío vacío
+
+### 7. **Mejoras Responsive Adicionales** ✅
+- Grid de productos ajustado en móvil
+- Categorías y features en una columna
+- Espaciado optimizado para pantallas pequeñas
+
+## 📁 Estructura del Proyecto
 
 ```
 /workspace
-├── index.html      # Página principal
-├── styles.css      # Estilos y diseño
-├── script.js       # Lógica y funcionalidad
-└── README.md       # Documentación
+├── index.html          # Estructura HTML con mejoras de accesibilidad
+├── styles.css          # Estilos con menú móvil y accessibility
+├── script.js           # Lógica refactorizada con ES6 modules
+├── products-data.js    # Datos de productos externalizados
+└── README.md           # Documentación
 ```
 
-## Cómo Usar
+## 🚀 Cómo Usar
 
-1. Abre el archivo `index.html` en tu navegador
-2. Explora los productos por categoría
-3. Agrega productos al carrito
-4. Realiza búsquedas específicas
-5. Completa el formulario de contacto si necesitas ayuda
+1. Abre `index.html` en un navegador moderno
+2. O usa un servidor local:
+   ```bash
+   python3 -m http.server 8080
+   ```
+3. Visita `http://localhost:8080`
 
-## Tecnologías
+## 📱 Características
 
-- HTML5
-- CSS3 (Variables, Grid, Flexbox)
-- JavaScript ES6+
-- Font Awesome (iconos)
+- ✅ Carrito de compras funcional con localStorage
+- ✅ Filtrado por categorías
+- ✅ Búsqueda con debounce
+- ✅ Menú móvil responsive
+- ✅ Totalmente accesible
+- ✅ Notificaciones toast
+- ✅ Diseño moderno y limpio
 
-## Funcionalidades Destacadas
+## 🔮 Próximas Mejoras Sugeridas
 
-- **Filtrado por Categorías**: Todos, Electrónica, Ropa, Hogar
-- **Carrito Persistente**: Los datos se guardan en el navegador
-- **Notificaciones**: Feedback visual para acciones del usuario
-- **Scroll Suave**: Navegación fluida entre secciones
-- **Modo Oscuro**: Footer con contraste elegante
+1. **Integración con Backend**: Conectar a API real
+2. **Pasarela de Pago**: Stripe/PayPal integration
+3. **PWA**: Service workers para offline
+4. **Tests**: Unit tests con Jest
+5. **Framework**: Migrar a React/Vue si escala
+6. **Imágenes Reales**: Reemplazar emojis por fotos
+7. SEO optimization
+8. Analytics integration
+
+## 🛠️ Tecnologías
+
+- HTML5 semántico
+- CSS3 con variables
+- JavaScript ES6+ (modules, classes)
+- Font Awesome icons
+- LocalStorage API
 
 ---
 
-© 2024 GrwStore. Todos los derechos reservados.
+**© 2024 GrwStore** - Tu tienda online mejorada
