@@ -81,7 +81,7 @@ body {
 .search-box {
     display: flex;
     border: 2px solid var(--bg-light);
-    border-radius: 25px;
+    border-radius: 0;
     overflow: hidden;
 }
 
@@ -157,7 +157,7 @@ body {
     color: var(--white);
     border: none;
     padding: 0.8rem 2rem;
-    border-radius: 25px;
+    border-radius: 0;
     font-size: 1rem;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -173,7 +173,7 @@ body {
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
     padding: 0.8rem 2rem;
-    border-radius: 25px;
+    border-radius: 0;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s;
@@ -199,7 +199,7 @@ body {
 .feature-card {
     background: var(--white);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 0;
     text-align: center;
     box-shadow: var(--shadow);
     transition: transform 0.3s;
@@ -244,7 +244,7 @@ body {
 .category-card {
     background: var(--white);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 0;
     text-align: center;
     box-shadow: var(--shadow);
     transition: all 0.3s;
@@ -288,7 +288,7 @@ body {
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
     padding: 0.6rem 1.5rem;
-    border-radius: 25px;
+    border-radius: 0;
     cursor: pointer;
     transition: all 0.3s;
     font-weight: 500;
@@ -308,7 +308,7 @@ body {
 
 .product-card {
     background: var(--white);
-    border-radius: 10px;
+    border-radius: 0;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: transform 0.3s;
@@ -359,7 +359,7 @@ body {
     color: var(--white);
     border: none;
     padding: 0.8rem;
-    border-radius: 5px;
+    border-radius: 0;
     cursor: pointer;
     transition: background 0.3s;
     font-weight: 500;
@@ -376,7 +376,7 @@ body {
 
 .offers-banner {
     background: linear-gradient(135deg, var(--accent-color), #d97706);
-    border-radius: 15px;
+    border-radius: 0;
     padding: 3rem;
     text-align: center;
     color: var(--white);
@@ -441,7 +441,7 @@ body {
 .contact-form textarea {
     padding: 1rem;
     border: 2px solid var(--bg-light);
-    border-radius: 5px;
+    border-radius: 0;
     font-family: inherit;
     font-size: 1rem;
     transition: border-color 0.3s;
@@ -525,7 +525,7 @@ body {
     flex: 1;
     padding: 0.8rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0;
 }
 
 .newsletter-form button {
@@ -533,7 +533,7 @@ body {
     color: var(--white);
     border: none;
     padding: 0.8rem 1rem;
-    border-radius: 5px;
+    border-radius: 0;
     cursor: pointer;
 }
 
@@ -613,7 +613,7 @@ body {
     width: 80px;
     height: 80px;
     background: var(--bg-light);
-    border-radius: 5px;
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -688,7 +688,7 @@ body {
     width: 25px;
     height: 3px;
     background: var(--text-dark);
-    border-radius: 2px;
+    border-radius: 0;
     transition: all 0.3s ease;
 }
 
@@ -707,7 +707,7 @@ body {
     background: var(--primary-color);
     color: white;
     padding: 1rem 2rem;
-    border-radius: 5px;
+    border-radius: 0;
     box-shadow: var(--shadow-lg);
     animation: slideInRight 0.3s ease;
 }
