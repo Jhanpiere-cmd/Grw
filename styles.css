@@ -6,19 +6,19 @@
 }
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --accent-color: #f59e0b;
+    --primary-color: #4f46e5;
+    --secondary-color: #4338ca;
+    --accent-color: #ec4899;
     --text-dark: #1f2937;
     --text-light: #6b7280;
     --bg-light: #f3f4f6;
     --white: #ffffff;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--white);
@@ -32,7 +32,8 @@ body {
 
 /* Header */
 .header {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
     box-shadow: var(--shadow);
     position: sticky;
     top: 0;
@@ -90,6 +91,11 @@ body {
     border: none;
     outline: none;
     width: 200px;
+    transition: box-shadow 0.3s;
+}
+
+.search-box:focus-within {
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
 }
 
 .search-btn {
@@ -157,7 +163,7 @@ body {
     color: var(--white);
     border: none;
     padding: 0.8rem 2rem;
-    border-radius: 25px;
+    border-radius: 30px;
     font-size: 1rem;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -165,7 +171,7 @@ body {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 4px 14px 0 rgba(236, 72, 153, 0.39);
 }
 
 .btn-secondary {
@@ -199,14 +205,15 @@ body {
 .feature-card {
     background: var(--white);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 16px;
     text-align: center;
     box-shadow: var(--shadow);
-    transition: transform 0.3s;
+    transition: all 0.3s;
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
 }
 
 .feature-card i {
@@ -244,7 +251,7 @@ body {
 .category-card {
     background: var(--white);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 16px;
     text-align: center;
     box-shadow: var(--shadow);
     transition: all 0.3s;
@@ -253,7 +260,8 @@ body {
 
 .category-card:hover {
     border-color: var(--primary-color);
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
 }
 
 .category-icon {
@@ -308,14 +316,15 @@ body {
 
 .product-card {
     background: var(--white);
-    border-radius: 10px;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: transform 0.3s;
+    transition: all 0.3s;
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
 }
 
 .product-image {
@@ -359,14 +368,16 @@ body {
     color: var(--white);
     border: none;
     padding: 0.8rem;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s;
     font-weight: 500;
 }
 
 .add-to-cart:hover {
     background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
 }
 
 /* Offers */
@@ -441,16 +452,17 @@ body {
 .contact-form textarea {
     padding: 1rem;
     border: 2px solid var(--bg-light);
-    border-radius: 5px;
+    border-radius: 8px;
     font-family: inherit;
     font-size: 1rem;
-    transition: border-color 0.3s;
+    transition: all 0.3s;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
 }
 
 /* Footer */
