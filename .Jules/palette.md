@@ -1,0 +1,3 @@
+## 2024-05-24 - Icon-only buttons lacking ARIA labels
+**Learning:** The app makes heavy use of icon-only interactive elements (search buttons, cart toggles, user profiles, social links, delete buttons) without descriptive text. This is a critical accessibility issue for screen reader users as they receive no context about what the button does. The `cart-item-remove` button is specifically generated dynamically via JavaScript, meaning accessibility fixes must be applied to the string templates as well as static HTML.
+**Action:** Always verify that buttons or links consisting solely of an icon (e.g., FontAwesome `<i>` tags) include an `aria-label` attribute describing their function. Pay special attention to components generated via template literals in JavaScript files.
