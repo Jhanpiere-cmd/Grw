@@ -1,0 +1,3 @@
+## 2024-03-21 - ARIA Labels on Icon-Only Controls
+**Learning:** Found a common pattern in GrwStore where all icon-only interactive elements (header buttons, social links, newsletter submit, and dynamic cart removal buttons) were completely lacking accessible names. This made them entirely invisible or confusing to screen reader users despite having clear visual affordances (icons).
+**Action:** Always audit static HTML and dynamically generated HTML templates (like those in script.js) for icon-only buttons/links and ensure they have descriptive `aria-label`s. Dynamically injected elements must dynamically generate their labels to remain contextual (e.g. `aria-label="Eliminar ${item.name} del carrito"`).
