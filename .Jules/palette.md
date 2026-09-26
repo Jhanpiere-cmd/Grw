@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessibility pattern for icon-only components
+**Learning:** The application extensively uses icon-only buttons (search, cart, user profile, social media) and relies on placeholders rather than explicit labels for inputs (search, contact, newsletter). This creates a significant barrier for screen reader users as interactive elements lack semantic context.
+**Action:** Always add `aria-label` attributes to icon-only buttons and inputs that lack explicit `<label>` elements to ensure accessibility for assistive technologies, maintaining clean visual design while providing semantic meaning.
