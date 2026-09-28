@@ -1,0 +1,3 @@
+## 2024-05-24 - Added ARIA Labels to Icon-Only Buttons and Inputs
+**Learning:** In purely vanilla projects without a component framework, ensuring accessible attributes on dynamically injected templates (like the cart items in `script.js`) is just as critical as statically typed HTML. A common pattern is injecting raw HTML strings where accessibility attributes can easily be forgotten. Adding `aria-hidden="true"` to Font Awesome `<i>` tags prevents screen readers from redundantly announcing the icon along with the `aria-label`.
+**Action:** Always verify dynamically generated HTML for a11y compliance, not just the static `index.html`, and consistently hide decorative icon elements with `aria-hidden="true"` when their parent provides an `aria-label`.
