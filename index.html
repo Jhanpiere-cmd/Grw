@@ -24,15 +24,15 @@
                 </nav>
                 <div class="header-actions">
                     <div class="search-box">
-                        <input type="text" placeholder="Buscar productos..." id="searchInput">
-                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                        <input type="text" placeholder="Buscar productos..." id="searchInput" aria-label="Buscar productos">
+                        <button class="search-btn" aria-label="Buscar"><i class="fas fa-search" aria-hidden="true"></i></button>
                     </div>
-                    <button class="cart-btn" id="cartBtn">
-                        <i class="fas fa-shopping-cart"></i>
+                    <button class="cart-btn" id="cartBtn" aria-label="Ver carrito">
+                        <i class="fas fa-shopping-cart" aria-hidden="true"></i>
                         <span class="cart-count" id="cartCount">0</span>
                     </button>
-                    <button class="user-btn">
-                        <i class="fas fa-user"></i>
+                    <button class="user-btn" aria-label="Perfil de usuario">
+                        <i class="fas fa-user" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -174,9 +174,9 @@
                     </div>
                 </div>
                 <form class="contact-form">
-                    <input type="text" placeholder="Tu nombre" required>
-                    <input type="email" placeholder="Tu email" required>
-                    <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+                    <input type="text" placeholder="Tu nombre" aria-label="Tu nombre" required>
+                    <input type="email" placeholder="Tu email" aria-label="Tu email" required>
+                    <textarea placeholder="Tu mensaje" aria-label="Tu mensaje" rows="5" required></textarea>
                     <button type="submit" class="btn-primary">Enviar Mensaje</button>
                 </form>
             </div>
@@ -191,10 +191,10 @@
                     <h3>GrwStore</h3>
                     <p>Tu tienda online de confianza con los mejores productos y precios.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -219,8 +219,8 @@
                     <h4>Newsletter</h4>
                     <p>Suscríbete para recibir ofertas exclusivas</p>
                     <form class="newsletter-form">
-                        <input type="email" placeholder="Tu email">
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        <input type="email" placeholder="Tu email" aria-label="Email para newsletter">
+                        <button type="submit" aria-label="Suscribirse al newsletter"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
                     </form>
                 </div>
             </div>
@@ -235,7 +235,7 @@
         <div class="cart-content">
             <div class="cart-header">
                 <h3>Tu Carrito</h3>
-                <button class="close-cart" id="closeCart">&times;</button>
+                <button class="close-cart" id="closeCart" aria-label="Cerrar carrito">&times;</button>
             </div>
             <div class="cart-items" id="cartItems">
                 <!-- Cart items will be loaded here -->
