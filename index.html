@@ -24,14 +24,14 @@
                 </nav>
                 <div class="header-actions">
                     <div class="search-box">
-                        <input type="text" placeholder="Buscar productos..." id="searchInput">
-                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                        <input type="text" placeholder="Buscar productos..." id="searchInput" aria-label="Buscar productos">
+                        <button class="search-btn" aria-label="Buscar"><i class="fas fa-search"></i></button>
                     </div>
-                    <button class="cart-btn" id="cartBtn">
+                    <button class="cart-btn" id="cartBtn" aria-label="Carrito de compras">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="cart-count" id="cartCount">0</span>
                     </button>
-                    <button class="user-btn">
+                    <button class="user-btn" aria-label="Mi cuenta">
                         <i class="fas fa-user"></i>
                     </button>
                 </div>
@@ -219,8 +219,8 @@
                     <h4>Newsletter</h4>
                     <p>Suscríbete para recibir ofertas exclusivas</p>
                     <form class="newsletter-form">
-                        <input type="email" placeholder="Tu email">
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        <input type="email" placeholder="Tu email" aria-label="Tu email para el newsletter">
+                        <button type="submit" aria-label="Suscribirse al newsletter"><i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
@@ -235,7 +235,7 @@
         <div class="cart-content">
             <div class="cart-header">
                 <h3>Tu Carrito</h3>
-                <button class="close-cart" id="closeCart">&times;</button>
+                <button class="close-cart" id="closeCart" aria-label="Cerrar carrito">&times;</button>
             </div>
             <div class="cart-items" id="cartItems">
                 <!-- Cart items will be loaded here -->
