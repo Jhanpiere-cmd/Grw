@@ -1,0 +1,3 @@
+## 2026-10-01 - Adding Accessible Names to Icon-Only Buttons and Inputs Without Labels
+**Learning:** Found that this app relies heavily on placeholder text for inputs and icon-only buttons (like FontAwesome icons) for critical actions like searching, cart operations, user profile access, and social links, which causes significant accessibility barriers for screen reader users.
+**Action:** Added `aria-label` attributes to all inputs that lack associated visible `<label>` elements, and to all icon-only buttons to provide clear accessible names. For dynamic content like cart items, included the item name in the `aria-label` (e.g., `Eliminar ${item.name} del carrito`) for better context.
