@@ -1,0 +1,3 @@
+## 2024-05-18 - Missing ARIA labels on inputs relying on placeholders
+**Learning:** Found that form inputs in this app (like contact and newsletter forms) relied exclusively on placeholders instead of `<label>` tags. Since adding explicit `<label>` tags might disrupt the visual layout of these forms, adding `aria-label` directly to the input fields is a safe, immediate way to improve screen reader accessibility without layout risks.
+**Action:** Always check form inputs for explicit `<label>` elements; if missing and structural changes are risky, default to adding `aria-label` attributes to ensure baseline accessibility.
