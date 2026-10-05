@@ -184,8 +184,8 @@ function updateCart() {
                     <div class="cart-item-title">${item.name}</div>
                     <div class="cart-item-price">$${item.price.toFixed(2)} x ${item.quantity}</div>
                 </div>
-                <button class="cart-item-remove" onclick="removeFromCart(${item.id})">
-                    <i class="fas fa-trash"></i>
+                <button class="cart-item-remove" onclick="removeFromCart(${item.id})" aria-label="Eliminar ${item.name} del carrito">
+                    <i class="fas fa-trash" aria-hidden="true"></i>
                 </button>
             </div>
         `).join('');
