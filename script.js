@@ -116,7 +116,7 @@ function renderProducts(productsToRender) {
                 <h3 class="product-title">${product.name}</h3>
                 <div class="product-price">$${product.price.toFixed(2)}</div>
                 <button class="add-to-cart" onclick="addToCart(${product.id})">
-                    <i class="fas fa-shopping-cart"></i> Agregar al Carrito
+                    Agregar al Carrito
                 </button>
             </div>
         </div>
@@ -184,8 +184,8 @@ function updateCart() {
                     <div class="cart-item-title">${item.name}</div>
                     <div class="cart-item-price">$${item.price.toFixed(2)} x ${item.quantity}</div>
                 </div>
-                <button class="cart-item-remove" onclick="removeFromCart(${item.id})">
-                    <i class="fas fa-trash"></i>
+                <button class="cart-item-remove" onclick="removeFromCart(${item.id})" aria-label="Quitar">
+                    &times;
                 </button>
             </div>
         `).join('');
