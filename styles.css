@@ -149,9 +149,12 @@ body {
 
 /* Hero */
 .hero {
-    background: var(--bg-light);
+    background:
+        linear-gradient(rgba(20, 20, 20, 0.48), rgba(20, 20, 20, 0.48)),
+        url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
     padding: 96px 0;
     text-align: center;
+    color: var(--white);
 }
 
 .hero-title {
@@ -162,9 +165,20 @@ body {
 }
 
 .hero-subtitle {
-    color: var(--text-light);
+    color: #f0f0eb;
     font-size: 1.05rem;
     margin-bottom: 34px;
+}
+
+.hero .btn-primary {
+    background: var(--white);
+    border-color: var(--white);
+    color: var(--text-dark);
+}
+
+.hero .btn-primary:hover {
+    background: transparent;
+    color: var(--white);
 }
 
 .btn-primary {
@@ -259,9 +273,18 @@ body {
 
 .category-card {
     border: 1px solid var(--line);
-    padding: 34px 22px;
+    padding: 0 0 22px;
     text-align: center;
     background: var(--white);
+    overflow: hidden;
+}
+
+.category-card img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
 .category-card h3 {
@@ -320,10 +343,20 @@ body {
 
 .product-image {
     background: var(--bg-light);
-    font-size: 3rem;
-    text-align: center;
-    padding: 44px 0;
-    line-height: 1;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.04);
 }
 
 .product-info {
@@ -377,7 +410,9 @@ body {
 }
 
 .offers-banner {
-    background: var(--text-dark);
+    background:
+        linear-gradient(rgba(20, 20, 20, 0.62), rgba(20, 20, 20, 0.62)),
+        url("https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=1800&q=85") center / cover no-repeat;
     color: var(--white);
     text-align: center;
     padding: 64px 24px;
@@ -609,13 +644,10 @@ body {
 }
 
 .cart-item-image {
-    font-size: 1.7rem;
     width: 52px;
     height: 52px;
     background: var(--bg-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    object-fit: cover;
     flex-shrink: 0;
 }
 

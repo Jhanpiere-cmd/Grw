@@ -5,84 +5,96 @@ const products = [
         name: "Laptop Pro 15",
         category: "electronica",
         price: 999.99,
-        icon: "💻"
+        image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80",
+        imageAlt: "Computadora portátil plateada"
     },
     {
         id: 2,
         name: "Smartphone X",
         category: "electronica",
         price: 699.99,
-        icon: "📱"
+        image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80",
+        imageAlt: "Teléfono inteligente"
     },
     {
         id: 3,
         name: "Auriculares Wireless",
         category: "electronica",
         price: 149.99,
-        icon: "🎧"
+        image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+        imageAlt: "Audífonos inalámbricos"
     },
     {
         id: 4,
         name: "Camiseta Casual",
         category: "ropa",
         price: 29.99,
-        icon: "👕"
+        image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+        imageAlt: "Camiseta de algodón"
     },
     {
         id: 5,
         name: "Jeans Clásicos",
         category: "ropa",
         price: 59.99,
-        icon: "👖"
+        image: "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=80",
+        imageAlt: "Prenda de mezclilla"
     },
     {
         id: 6,
         name: "Zapatillas Deportivas",
         category: "ropa",
         price: 89.99,
-        icon: "👟"
+        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+        imageAlt: "Zapatilla deportiva roja"
     },
     {
         id: 7,
         name: "Lámpara de Mesa",
         category: "hogar",
         price: 45.99,
-        icon: "💡"
+        image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
+        imageAlt: "Lámpara de mesa"
     },
     {
         id: 8,
         name: "Cojín Decorativo",
         category: "hogar",
         price: 24.99,
-        icon: "🛋️"
+        image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80",
+        imageAlt: "Cojín decorativo"
     },
     {
         id: 9,
         name: "Reloj Inteligente",
         category: "electronica",
         price: 249.99,
-        icon: "⌚"
+        image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
+        imageAlt: "Reloj de pulsera"
     },
     {
         id: 10,
         name: "Chaqueta de Cuero",
         category: "ropa",
         price: 129.99,
-        icon: "🧥"
+        image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80",
+        imageAlt: "Chaqueta de cuero"
     },
     {
         id: 11,
         name: "Planta Decorativa",
         category: "hogar",
         price: 34.99,
-        icon: "🪴"
+        image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=800&q=80",
+        imageAlt: "Planta decorativa en maceta"
     },
     {
         id: 12,
         name: "Tablet Ultra",
         category: "electronica",
         price: 449.99,
-        icon: "📱"
+        image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80",
+        imageAlt: "Tableta electrónica"
     }
 ];
 
@@ -110,7 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
 function renderProducts(productsToRender) {
     productsGrid.innerHTML = productsToRender.map(product => `
         <div class="product-card" data-category="${product.category}">
-            <div class="product-image">${product.icon}</div>
+            <div class="product-image">
+                <img src="${product.image}" alt="${product.imageAlt}" loading="lazy" decoding="async">
+            </div>
             <div class="product-info">
                 <span class="product-category">${product.category}</span>
                 <h3 class="product-title">${product.name}</h3>
@@ -179,7 +193,7 @@ function updateCart() {
     } else {
         cartItems.innerHTML = cart.map(item => `
             <div class="cart-item">
-                <div class="cart-item-image">${item.icon}</div>
+                <img class="cart-item-image" src="${item.image}" alt="${item.imageAlt}" loading="lazy" decoding="async">
                 <div class="cart-item-info">
                     <div class="cart-item-title">${item.name}</div>
                     <div class="cart-item-price">$${item.price.toFixed(2)} x ${item.quantity}</div>

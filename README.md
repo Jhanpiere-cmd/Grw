@@ -41,6 +41,10 @@ GrwStore es una página web e-commerce moderna y responsiva creada con HTML, CSS
 - JavaScript ES6+
 - Font Awesome (iconos)
 
+## Imágenes
+
+Las fotografías de portada, categorías y productos se sirven desde Unsplash y se usan bajo su licencia gratuita: https://unsplash.com/license. Se requiere conexión a Internet para cargarlas.
+
 ## Funcionalidades Destacadas
 
 - **Filtrado por Categorías**: Todos, Electrónica, Ropa, Hogar
